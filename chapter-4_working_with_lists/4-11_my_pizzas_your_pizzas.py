@@ -8,18 +8,18 @@ Print the message 'My friend's favorite pizzas are:', and then use a for loop to
 Make sure each new pizza is stored in the appropriate list."""
 
 my_pizzas = ["Muzzarela", "Lombo", "Calabresa"]
-fried_pizzas = my_pizzas[:]
+friend_pizzas = my_pizzas[:]
 
 # Adicionando uma pizza nova à lista original
 my_pizzas.append("Pepperoni")
 
 # Adicionando uma pizza diferente à lista do meu amigo
-fried_pizzas.append("Primavera")
+friend_pizzas.append("Primavera")
 
 # Provando que as listas são diferentes
 print(f"\nMinhas pizzas favoritas são:")
 for pizza in my_pizzas:
     print(pizza)
 print(f"\nAs pizzas favoritas do meu amigo são:")
-for pizza in fried_pizzas:
+for pizza in friend_pizzas:
     print(pizza)
