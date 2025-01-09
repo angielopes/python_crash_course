@@ -11,3 +11,10 @@ favorite_languages = {
     "edward": "rust",
     "phil": "python",
 }
+poll = ["angela", "sarah", "julia", "phil"]
+
+for name in poll:
+    if name in favorite_languages:
+        print(f"Thanks, {name.capitalize()}, for responding to the poll!")
+    else:
+        print(f"{name.capitalize()}, you have been invited to respond to the poll.")
