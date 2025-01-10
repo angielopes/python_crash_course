@@ -39,7 +39,7 @@ gizmo = {
 }
 
 pets = [totoro, pikachu, toothless, scooby_doo, gizmo]
-correcterd_names = {"hiccup horrendous haddock iii": "Hiccup Horrendous Haddock III"}
+corrected_names = {"hiccup horrendous haddock iii": "Hiccup Horrendous Haddock III"}
 
 print("\n(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ WONDERFUL PETS")
 for pet in pets:
@@ -48,5 +48,5 @@ for pet in pets:
     print(f"It belongs to the species of {pet['especie'].title()}.")
     # Correct owner's name, if necessary
     owner = pet["owner"].lower()
-    owner = correcterd_names.get(owner, owner.title())
+    owner = corrected_names.get(owner, owner.title())
     print(f"{owner} owns it.")
