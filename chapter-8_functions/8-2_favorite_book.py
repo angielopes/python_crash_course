@@ -5,7 +5,7 @@ Call the function, making sure to include a book title as an argument in the fun
 
 def favorite_book(title):
     print(
-        f"I dont know if this is my favortie book (because there are a lot), but one of my favorite books is {title.title()}."
+        f"I dont know if this is my favorite book (because there are a lot), but one of my favorite books is {title.title()}."
     )
 
 
