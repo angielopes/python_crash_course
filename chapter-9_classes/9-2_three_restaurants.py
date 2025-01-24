@@ -1,10 +1,6 @@
-"""Make a class called Restaurant. The __init__() method for Restaurant
-should store two attributes: a restaurant_name and a cuisine_type.
-Make a method called describe_restaurant() that prints these two pieces
-of information, and a method called open_restaurant() that prints a
-message indicating that the restaurant is open.
-    Make an instance called restaurant from your class.
-    Print the two attributes individually, and then call both methods."""
+"""Start with your class from Exercise 9-1.
+Create three different instances from the class, 
+and call describe_restaurant() for each instance."""
 
 
 class Restaurant:
@@ -55,7 +51,20 @@ class Restaurant:
         print(f"And the {self.restaurant_name} is now open!")
 
 
-my_restaurant = Restaurant("Kiki Açaí", "Açai")
+restaurant_info = {
+    "Ichiraku Ramen": "Japanese Ramen",
+    "Pizza Planet": "Italian Pizza",
+    "Kame House Café": "Tropical Smoothies",
+    "Central Perk": "Coffee and Pastries",
+    "Gusteau's": "French Cuisine",
+    "The Prancing Pony": "Medieval Pub Food",
+    "Good Burger": "American Burgers",
+    "Baratie": "Seafood",
+    "Rosie's Diner": "Classic American Diner",
+    "The Three Broomsticks": "British Pub Food and Butterbeer",
+}
 
-my_restaurant.describe_restaurant()
-my_restaurant.open_restaurant()
+for name, cuisine in restaurant_info.items():
+    restaurant = Restaurant(name, cuisine)
+    restaurant.describe_restaurant()
+    restaurant.open_restaurant()
