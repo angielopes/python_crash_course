@@ -20,7 +20,7 @@ class User:
     nickname : str
         Nickname of the user
     login_attempts : int
-        User attempts made by the user
+        Loging attempts made by the user
 
     Methods:
     ----------
