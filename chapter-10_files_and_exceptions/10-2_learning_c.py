@@ -7,14 +7,10 @@ Print each modified line to the screen."""
 from pathlib import Path
 
 path = Path("chapter-10_files_and_exceptions/files/10-1_learning_c.txt")
-contents = path.read_text()
+contents = path.read_text().replace("Python", "C")
 
-lines = contents.replace("Python", "C")  # Makes a copy
 file_string = ""
-for line in lines:
-    file_string += line
-
+for content in contents:
+    file_string += content
 
 print(file_string)
-print("\n")
-print(contents)
