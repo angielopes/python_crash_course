@@ -1,0 +1,4 @@
+In Python you can work with strings.
+In Python you can work with numbers.
+In Python you can work with lists, tuples, sets and dictionaries.
+In Python you can make your own modules.
