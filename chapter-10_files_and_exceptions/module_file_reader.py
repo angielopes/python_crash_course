@@ -72,9 +72,13 @@ class FileReader:
         Returns:
             None
         """
+        file_contents = {}
         for file_path in self.file_paths:
             try:
                 path_object = Path(file_path)
                 content = path_object.read_text(encoding="utf-8")
+                file_contents[file_path] = content
+                print(f"File '{file_path}' read successfully.")
             except FileNotFoundError:
                 print(f"The file {file_path} does not exist.")
+        return file_contents
