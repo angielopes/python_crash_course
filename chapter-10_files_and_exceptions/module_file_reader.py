@@ -1,38 +1,34 @@
 """
-This module provides a FileReader class for reading the contents of multiple files.
+This module provides a FileReader class to handle reading multiple files specified by the user.
 
 Classes:
-    FileReader: A class to manage file paths and read their contents.
-
+    FileReader: A class to handle reading multiple files specified by the user.
 Usage Example:
     file_reader = FileReader()
     file_reader.add_files()
-    file_reader.read_files()
+    contents = file_reader.read_files()
+    print(contents)
 """
 
 from pathlib import Path
+from module_file_reader import FileReader
 
 
 class FileReader:
     """
-    A class to handle reading multiple files.
-
-    Attributes:
-    -----------
-
-    file_paths : list
-        A list to store file paths added by the user.
+    A class to handle reading multiple files specified by the user.
 
     Methods:
-    --------
-
-    add_files():
-        Prompts the user to input file paths and adds them to the file_paths list.
-        Returns the list of file paths.
-    read_files():
-        Reads the content of each file in the file_paths list.
-        Prints an error message if a file is not found.
-    """
+        __init__():
+            Initializes the FileReader instance with an empty list of file paths.
+        add_files():
+            Continuously prompts until the user enters 'q' to quit.
+            Returns a list of file paths entered by the user.
+        read_files():
+            Reads the contents of files specified in the file_paths attribute.
+            Returns a dictionary where the keys are file paths and the values are
+            the contents of the corresponding files.
+            Prints an error message if a file is not found."""
 
     def __init__(self):
         """
@@ -62,16 +58,16 @@ class FileReader:
 
     def read_files(self):
         """
-        Reads the content of files specified in the file_paths attribute.
-        Iterates over each file path in the file_paths attribute, attempts to read
-        the content of each file using UTF-8 encoding, and stores the content in a
-        variable. If a file is not found, it prints an error message indicating
-        that the file does not exist.
-        Raises:
-            FileNotFoundError: If a file specified in file_paths does not exist.
+        Reads the contents of files specified in the instance's file_paths attribute.
+        This method iterates over the list of file paths stored in the instance's
+        file_paths attribute, reads the content of each file, and stores the content
+        in a dictionary with the file path as the key. If a file is not found, it
+        prints an error message indicating the missing file.
         Returns:
-            None
+            dict: A dictionary where the keys are file paths and the values are the
+                  contents of the corresponding files.
         """
+
         file_contents = {}
         for file_path in self.file_paths:
             try:
