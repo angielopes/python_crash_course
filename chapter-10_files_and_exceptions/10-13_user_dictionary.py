@@ -27,6 +27,13 @@ def get_stored_user_info(path):
 
 
 def get_new_user_info(path):
+    """
+    Prompt the user for their full name, age, and username, then save this information to a file.
+    Args:
+        path (Path): The file path where the user information will be saved.
+    Returns:
+        dict: A dictionary containing the user's full name, age, and username.
+    """
     # docstring
     user_info = {}
     user_info["full_name"] = input("What's your full name? ")
@@ -47,6 +54,19 @@ def get_new_user_info(path):
 
 
 def greet_user():
+    """
+    Greet the user and display their stored information if available.
+    This function attempts to retrieve user information from a JSON file. If the information
+    is found, it prints a summary of the user's details. If the information is not found,
+    it prompts the user to enter their details, saves the information to the JSON file,
+    and thanks the user.
+    The user information includes:
+    - Full name
+    - Age
+    - Username
+
+    The JSON file is expected to be located at 'chapter-10_files_and_exceptions/files/user_info.json'.
+    """
 
     path = Path("chapter-10_files_and_exceptions/files/user_info.json")
     user_info = get_stored_user_info(path)
