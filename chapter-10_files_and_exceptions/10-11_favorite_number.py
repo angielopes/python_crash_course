@@ -50,7 +50,7 @@ def read_favorite_number():
         print(f"I know your favorite number! It's {number}")
     else:
         number = get_favorite_number()
-        print(f"Now I now your favorite number :)")
+        print(f"Now I now your favorite number is {number}:)")
 
 
 read_favorite_number()
