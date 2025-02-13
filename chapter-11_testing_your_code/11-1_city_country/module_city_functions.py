@@ -1,12 +1,12 @@
-def get_city_country(city, country, comma=","):
+def get_city_country(city, country):
     """
-    Generate a formatted string of a city and country.
+    Generate a formatted string of the form 'City, Country'.
     Args:
         city (str): The name of the city.
         country (str): The name of the country.
-        comma (str, optional): The separator between city and country. Defaults to ",".
     Returns:
-        str: A formatted string in the form 'City, Country'.
+        str: A string formatted as 'City, Country' with title case.
     """
-    city_country = f"{city}{comma} {country}"
+
+    city_country = f"{city}, {country}"
     return city_country.title()
